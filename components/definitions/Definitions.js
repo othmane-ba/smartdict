@@ -40,8 +40,8 @@ const Definitions = ({ word, category, meanings, LightMode }) => {
       ) : (
         meanings.map((mean) =>
           mean.meanings.map((item) =>
-            item.definitions.map((def) => (
-              <SingleMean
+            item.definitions.map((def,index) => (
+              <SingleMean key={index}
                 style={{
                   backgroundColor: LightMode ? '#3b5360' : 'white',
                   color: LightMode ? 'white' : 'black',
